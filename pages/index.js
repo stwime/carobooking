@@ -1,5 +1,6 @@
+import React from 'react'
 import Head from 'next/head';
-import 'tailwindcss/tailwind.css';
+
 
 const Home = () => (
   <div className="py-5">

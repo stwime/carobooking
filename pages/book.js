@@ -1,21 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react';
 import moment from 'moment'
-import { Calendar, momentLocalizer } from 'react-big-calendar'
-import 'react-big-calendar/lib/css/react-big-calendar.css'
-import 'tailwindcss/tailwind.css';
-// Setup the localizer by providing the moment (or globalize) Object
-// to the correct localizer.
-
-moment.locale('de', {
-  week: {
-      dow: 1,
-      doy: 1,
-  },
-});
-
-
-const localizer = momentLocalizer(moment) // or globalizeLocalizer
-
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction';
 
 const dayAgenda = [
   {
@@ -69,30 +57,48 @@ for (let i = 0; i < 5; i++){
   for (let event of dayAgenda){
     const newEvent = {"title":"Free"};
     newEvent.start = event.start.add(-1, 'days').toDate();
+    newEvent.id = newEvent.start.getUTCMilliseconds();
     newEvent.end = event.end.add(-1, 'days').toDate();
     eventsFixture.push(newEvent)
   }
 }
-export default class BookingCalendar extends React.Component {
-  render() {
-    return (
-        <div className="p-24 bg-gray-100">
-        <div className=" m-5 p-5 bg-white rounded-xl shadow-md overflow-hidden h-2/3">
-        <div>
-        <Calendar
-            step={30}
-            min={moment('2021-03-20T08:00:00+01:00').toDate()}
-            max={moment('2021-03-20T19:00:00+01:00').toDate()}
-            defaultView="week"
-            localizer={localizer}
-            events={eventsFixture}
-            startAccessor="start"
-            endAccessor="end"
-        />
-  </div>
-        </div>
-        </div>
+export default function BookingCalendar() {
+    const [selectedEvents, setEvents] = useState([]);
 
+    return (
+        <div className="p-20 h-100 bg-gray-100">
+        <div className="p-12 m-1 w-1/2 bg-white rounded-xl shadow-md h-100 overflow-hidden">
+        <FullCalendar
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          initialView='timeGridWeek'
+          slotMinTime="06:00:00"
+          slotMaxTime="19:00:00"
+          height={600}
+          eventClick={(info) => setEvents([...selectedEvents, info.event])}
+          editable={false}
+          selectOverlap={false}
+          expandRows={false}
+          firstDay={1}
+          businessHours= {{
+            // days of week. an array of zero-based day of week integers (0=Sunday)
+            daysOfWeek: [ 1, 2, 3, 4, 5 ], 
+
+          }}
+          allDaySlot={false}
+          headerToolbar={
+            {
+              start: 'title', // will normally be on the left. if RTL, will be on the right
+              center: '',
+              end: 'today prev,next' // will normally be on the right. if RTL, will be on the left
+            }
+          }
+        nowIndicator={true}
+        initialEvents={eventsFixture}
+      /></div>
+        <div className="w-1/2 p-12 m-1 bg-white rounded-xl shadow-md">
+          <ul>{selectedEvents.map(e => (<li>{e.id} {e.title}</li>))}</ul>
+        </div>
+        </div>
     )
-  }
+
 }
