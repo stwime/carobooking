@@ -6,4 +6,9 @@
 body {
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
+    background-color: white;
 }
+
+.gradient {
+    background: linear-gradient(90deg, #e4608c 0%, #9367e6 100%);
+  }

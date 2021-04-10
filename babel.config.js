@@ -14,6 +14,7 @@ module.exports = {
         './node_modules'
       ],
       plugins: [
+        "inline-react-svg",
         ['babel-plugin-transform-require-ignore', {
           extensions: ['.css']
         }]

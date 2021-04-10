@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import moment from 'moment'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import interactionPlugin from '@fullcalendar/interaction';
+
+import dynamic from "next/dynamic";
+
+
+const Calendar = dynamic(() => import("../components/datepickingcalendar.jsx"), {
+  ssr: false,
+});
 
 const dayAgenda = [
   {
@@ -63,41 +66,10 @@ for (let i = 0; i < 5; i++){
   }
 }
 export default function BookingCalendar() {
-    const [selectedEvents, setEvents] = useState([]);
-
     return (
-        <div className="p-20 h-100 bg-gray-100">
-        <div className="p-12 m-1 w-1/2 bg-white rounded-xl shadow-md h-100 overflow-hidden">
-        <FullCalendar
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-          initialView='timeGridWeek'
-          slotMinTime="06:00:00"
-          slotMaxTime="19:00:00"
-          height={600}
-          eventClick={(info) => setEvents([...selectedEvents, info.event])}
-          editable={false}
-          selectOverlap={false}
-          expandRows={false}
-          firstDay={1}
-          businessHours= {{
-            // days of week. an array of zero-based day of week integers (0=Sunday)
-            daysOfWeek: [ 1, 2, 3, 4, 5 ], 
-
-          }}
-          allDaySlot={false}
-          headerToolbar={
-            {
-              start: 'title', // will normally be on the left. if RTL, will be on the right
-              center: '',
-              end: 'today prev,next' // will normally be on the right. if RTL, will be on the left
-            }
-          }
-        nowIndicator={true}
-        initialEvents={eventsFixture}
-      /></div>
-        <div className="w-1/2 p-12 m-1 bg-white rounded-xl shadow-md">
-          <ul>{selectedEvents.map(e => (<li>{e.id} {e.title}</li>))}</ul>
-        </div>
+        <div className="p-10 h-screen bg-gray-100">
+          <div className="calendly-inline-widget" data-url="https://calendly.com/stwime" style={{"minWidth": "320px", "height": "100%"}}></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
     )
 
