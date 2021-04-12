@@ -16,12 +16,12 @@ const Home = () => (
   <div
     className="leading-normal tracking-normal text-white gradient"
     style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
-    <Navbar />
+    <Navbar selected="Home" />
     <div className="pt-24">
       <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <h1 className="my-4 text-5xl font-bold leading-tight">
-            Start Learning Spanish today, for real!
+            Start learning Spanish today!
           </h1>
           <p className="leading-normal text-2xl mb-8">
             Lean Spanish with a professional, certified teacher - and get
@@ -103,7 +103,7 @@ const Home = () => (
         Book your first lesson and start learning today!
       </h3>
       <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Book
+        Book now!
       </button>
     </section>
   </div>
