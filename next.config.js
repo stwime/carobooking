@@ -7,4 +7,3 @@
       domains: ['images.ctfassets.net'],
     }
 }
-
