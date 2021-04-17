@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const navContentTopClasses = ' bg-white shadow text-gray-800';
+const navContentTopClasses = ' bg-white shadow text-gray-800 gradient';
 const navContentScrollClasses = 'text-white bg-transparent';
 
 export default function Navbar({alwaysDark=false}) {
@@ -23,7 +23,7 @@ export default function Navbar({alwaysDark=false}) {
     <nav
       id="header"
       className={targetClassName}>
-      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 ">
         <div className="pl-4 flex items-center">
           <a
             className={"handwritten toggleColour no-underline hover:no-underline font-bold text-2xl lg:text-4xl  " + (scrolling || alwaysDark ? "text-gray-800" : "text-white")}

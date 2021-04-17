@@ -16,3 +16,14 @@ body {
 .handwritten {
   font-family: 'Indie Flower', serif;
 }
+
+
+.article p {
+  margin-top: 1em;
+  font-size: 16px;
+}
+
+.article li p:not(:first-child){
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
