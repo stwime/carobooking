@@ -3,7 +3,12 @@ import React from 'react';
 import Head from "next/head";
 
 import dynamic from "next/dynamic";
-import Navbar from '../components/navbar.jsx';
+import Waves from '../components/svgs/waves.jsx';
+
+
+const Navbar = dynamic(() => import("../components/navbar.jsx"), {
+  ssr: false,
+});
 
 
 const CalendlyContainer = dynamic(() => import("../components/calendlycontainer.jsx"), {
@@ -12,9 +17,12 @@ const CalendlyContainer = dynamic(() => import("../components/calendlycontainer.
 
 export default function BookingPage() {
     return (
-      <div>
-        <Navbar alwaysDark={true}/>
-        <div className="pt-12 h-screen bg-gray-100">
+      <div className="bg-gray-100 h-screen">
+        <Navbar/>
+        <div className="relative md:-mt-4 xl:-mt-6 -mt-12 gradient">
+            <Waves />
+          </div>
+        <div className="pt-12 h-auto bg-gray-100 -mt-20 h-full">
             <CalendlyContainer />
         </div>
       </div>

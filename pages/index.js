@@ -16,10 +16,10 @@ const Home = () => (
   <div
     className="leading-normal tracking-normal text-white gradient"
     style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
-    <Navbar selected="Home" />
+    <Navbar />
     <div className="pt-24">
       <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <div className="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
           <h1 className="my-4 text-5xl font-bold leading-tight">
             Start learning Spanish today!
           </h1>
@@ -33,14 +33,14 @@ const Home = () => (
             Book a Lesson
           </a>
         </div>
-        <div className="w-full md:w-3/5 py-6 text-center">
-          <img className="w-full md:w-4/5 z-50" src="hero.png" />
+        <div className="w-full md:w-2/5 py-6 text-center">
+          <img className="w-full md:w-4/5 z-50" src="her4_transpartent.png" />
         </div>
       </div>
     </div>
-    <div className="relative -mt-12 lg:-mt-24">
-      <Waves />
-    </div>
+    <div className="relative md:-mt-1 xl:-mt-12 mt-0 gradient">
+            <Waves />
+          </div>
     <section className="bg-white border-b py-8">
       <div className="container max-w-5xl mx-auto m-8">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -58,8 +58,8 @@ const Home = () => (
           sideComponent={<OnlineLearning />}
         />
         <SellingPoint
-          title={'Student Network'}
-          text="Lorem ipsum bla bla other students are cool"
+          title={'The quickest way to learn'}
+          text="Learning with a personal teacher in lessons tailored to you has proven again and again to be the quickest way to improve or pick up a new language"
           sideComponent={<ConnectedWorld />}
           reverse={true}
         />
