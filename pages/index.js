@@ -92,7 +92,7 @@ const Home = () => (
         </g>
       </g>
     </svg>
-    <section className="container mx-auto text-center py-6 mb-12">
+    <section className="container mx-auto text-center pt-12 pb-36">
       <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
         What are you waiting for?
       </h1>
@@ -103,7 +103,7 @@ const Home = () => (
         Book your first lesson and start learning today!
       </h3>
       <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Book now!
+        <a href="/book">Book now!</a>
       </button>
     </section>
   </div>

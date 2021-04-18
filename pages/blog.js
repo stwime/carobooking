@@ -16,10 +16,10 @@ export default function blog({posts}) {
             <div className="relative md:mt-4 xl:mt-2 mt-8 gradient">
             <Waves />
           </div>
-            <div className="container max-w-6xl mx-auto mx-12">
+            <div className="container max-w-6xl mx-12">
             <h1 className="w-full my-32 text-5xl font-bold leading-tight text-center text-gray-800">
                     Blog & Reading Practice
-        </h1>
+          </h1>
             {
                 posts.map((blogPost, index) => 
                     <BlogPost title={blogPost.title} text={blogPost.text} level={blogPost.level} imagePath={"https:"+blogPost.image.fields.file.url} reverse={Boolean(index%2)}></BlogPost>
