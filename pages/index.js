@@ -34,7 +34,9 @@ const Home = () => (
           </a>
         </div>
         <div className="w-full md:w-2/5 py-6 text-center">
-          <img className="w-full md:w-4/5 z-50" src="her4_transpartent.png" />
+          <div className="w-full md:w-4/5 z-50">
+            <img className="p-12" src="herotest.png" />
+          </div>
         </div>
       </div>
     </div>
