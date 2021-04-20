@@ -5,6 +5,7 @@ import SellingPoint from '../components/sellingpoint';
 import Reading from '../components/svgs/reading';
 import Waves from '../components/svgs/waves';
 import dynamic from "next/dynamic";
+import Image from 'next/image';
 
 
 const Navbar = dynamic(() => import("../components/navbar.jsx"), {
@@ -35,7 +36,9 @@ const Home = () => (
         </div>
         <div className="w-full md:w-2/5 py-6 text-center">
           <div className="w-full md:w-4/5 z-50">
-            <img className="p-12" src="herotest.png" />
+            <div className="m-12 h-96 w-96 relative">
+              <Image layout="fill" src="/herotest.png" />
+            </div>
           </div>
         </div>
       </div>
