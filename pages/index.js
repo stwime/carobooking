@@ -4,14 +4,12 @@ import OnlineLearning from '../components/svgs/onlinelearning.jsx';
 import SellingPoint from '../components/sellingpoint';
 import Reading from '../components/svgs/reading';
 import Waves from '../components/svgs/waves';
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-
-const Navbar = dynamic(() => import("../components/navbar.jsx"), {
+const Navbar = dynamic(() => import('../components/navbar.jsx'), {
   ssr: false,
 });
-
 
 const Home = () => (
   <div
@@ -44,8 +42,8 @@ const Home = () => (
       </div>
     </div>
     <div className="relative md:-mt-1 xl:-mt-12 mt-0 gradient">
-            <Waves />
-          </div>
+      <Waves />
+    </div>
     <section className="bg-white border-b py-8">
       <div className="container max-w-5xl mx-auto m-8">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -73,6 +71,73 @@ const Home = () => (
           text="Learn at your own pace or join a group if you want idk"
           sideComponent={<Reading />}
         />
+      </div>
+    </section>
+    <section className="bg-gray-100 py-8">
+      <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Get to know me
+        </h1>
+        <div className="w-full mb-4">
+          <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div className="flex content-center lg:w-full rounded-lg p-24 sm:p-6 z-10">
+          <div className="flex w-full lg:w-4/5 mx-auto">
+            <iframe
+              width="1120"
+              height="630"
+              src="https://www.youtube.com/embed/55OmhwF0ybQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="bg-white border-b py-8">
+      <div className="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Teaching philosophy
+        </h1>
+        <div className="w-full mb-4">
+          <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div className="text-black p-12 ">
+          <p className="m-6">
+            From my earliest childhood memories, I remember loving to play
+            “school.” This love of the entire process of learning has followed
+            me throughout the changes in my career path.{' '}
+          </p>
+          <p className="m-6">
+            In any role, regardless of whether I am acting in the formal roles
+            of “instructor” or “student,” I seek to learn and to teach. My main
+            goal in any teaching endeavor is to encourage the student to explore
+            research and knowledge in order to incorporate it into their own
+            professional point of view.
+          </p>
+          <p className="m-6">
+            Teaching in this field requires one to attend to both the technical
+            knowledge a student needs and to their evolution as a reflective
+            professional and person. In encouraging this process, I believe it
+            is important to view the student-teacher relationship as one that is
+            co-constructed. Much as I hope students will learn from me, I
+            equally appreciate the learning I take from my students. In the
+            classroom space, I believe that authority and the responsibility for
+            learning is mutually shared.Part of this co-construction requires
+            that I reflect on my own approach, style and biases in the learning
+            process. It also requires that I recognize that students learn
+            differently, have differing levels of learning abilities, and that
+            my teaching must be sensitive to the individual needs of each
+            student.{' '}
+          </p>
+          <p className="m-6">
+            In approaching my teaching, I attempt to accommodate the myriad of
+            learning styles present in the classroom. I utilize a blend of
+            approaches, including When it comes to education, the process is
+            often the product, and I continually learn as I teach.
+          </p>
+        </div>
       </div>
     </section>
     <svg className="wave-top" viewBox="0 0 1439 147" version="1.1">

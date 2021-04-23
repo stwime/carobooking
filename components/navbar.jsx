@@ -5,9 +5,9 @@ import { useRouter } from 'next/router';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Blog', href: '/blog' },
-  { name: 'About', href: '/about' },
-  { name: 'Practice', href: '/practice' },
-  { name: 'Podcast', href: '/podcast' },
+  // { name: 'About', href: '/about' },
+  // { name: 'Practice', href: '/practice' },
+  // { name: 'Podcast', href: '/podcast' },
   { name: 'Impressum', href: '/legal' },
   { name: 'Book', href: '/book' },
 ];
