@@ -129,8 +129,8 @@ const Home = () => (
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div className="flex content-center lg:w-full rounded-lg p-24 sm:p-6 z-10">
-          <div className="flex w-full lg:w-4/5 mx-auto">
+        <div className="flex content-center lg:w-full rounded-lg p-1 sm:p-6 z-10">
+          <div className="flex w-full lg:w-4/5 mx-auto overflow-hidden">
             <iframe
               width="1120"
               height="630"
