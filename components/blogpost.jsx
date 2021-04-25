@@ -14,7 +14,7 @@ export default function BlogPost({
     <div className="px-20 w-5/12 max-h-screen p-6">
     <div className="w-full h-full sm:invisible md:visible relative">
       <Image
-        alt="Picture of a heart"
+        alt="Blogpost Image"
         layout="fill"
         objectFit="cover"
         className="object-scale rounded"

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Waves from '../components/svgs/waves.jsx';
 
@@ -14,11 +14,26 @@ export default function LegalPage() {
       <div className="relative md:-mt-4 xl:-mt-6 -mt-12 gradient">
         <Waves />
       </div>
-      <div className="align-middle flex justify-center">
-        <div className="legal container max-w-4xl pt-12 h-full">
-          <div>
-            <h1>Disclaimer</h1>
-            <p>Last updated: July 2020</p>
+      <div className="align-middle flex justify-center pt-6">
+        <div className="flex legal container max-w-7xl flex-wrap">
+          <div className="p-12 w-full lg:w-1/2">
+            <div className="flex align-center text-center">
+            <h1 className="inline my-auto">Disclaimer</h1>
+            <div className="inline ml-6 my-auto w-16">
+              <Image 
+                className="object-scale rounded"
+                height={66}
+                width={100}
+                alt="EU Flag"
+                src="/eu_flag.bmp"
+              />
+              </div>
+              </div>
+            <p className="lg:invisible visible lg:hidden font-bold">
+              For the German "Impressum", scroll down past the International
+              Disclaimer
+            </p>
+            <p>Last updated: April 2021</p>
             <h2>Interpretation</h2>
             <p>
               The words of which the initial letter is capitalized have meanings
@@ -158,110 +173,122 @@ export default function LegalPage() {
             <h2>Contact Us</h2>
             <p>
               If you have any questions about this Disclaimer, You can contact
-              Us:
+              Us at: carokowanzspanish@gmail.com
             </p>
           </div>
-        </div>
-        <div className="legal container max-w-4xl pt-12 h-full">
-          <h1>Impressum</h1>
-          <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-          <p>
-            Carolina Kowanz
-            <br />
-            Gartenfelder Str. 65
-            <br />
-            13599 Berlin
-          </p>
-          <h2>Kontakt</h2>
-          <p>
-            E-Mail: carokowanzspanish@gmail.com
-          </p>
-          <h2>Umsatzsteuer-ID</h2>
-          <p>
-            Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a
-            Umsatzsteuergesetz:
-            <br />
-            USID
-          </p>
-          <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-          <p>
-            Berufsbezeichnung: Sprachlehrerin
-            <br />
-          </p>
-          <h2>EU-Streitschlichtung</h2>
-          <p>
-            Die Europ&auml;ische Kommission stellt eine Plattform zur
-            Online-Streitbeilegung (OS) bereit:{' '}
-            <a
-              href="https://ec.europa.eu/consumers/odr/"
-              target="_blank"
-              rel="noopener noreferrer">
-              https://ec.europa.eu/consumers/odr/
-            </a>
-            .<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.
-          </p>
-          <h2>
-            Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle
-          </h2>
-          <p>
-            Wir sind nicht bereit oder verpflichtet, an
-            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-            teilzunehmen.
-          </p>
-          <h3>Haftung f&uuml;r Inhalte</h3>{' '}
-          <p>
-            Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG
-            f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen
-            Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als
-            Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder
-            gespeicherte fremde Informationen zu &uuml;berwachen oder nach
-            Umst&auml;nden zu forschen, die auf eine rechtswidrige
-            T&auml;tigkeit hinweisen.
-          </p>{' '}
-          <p>
-            Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
-            Informationen nach den allgemeinen Gesetzen bleiben hiervon
-            unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab
-            dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
-            m&ouml;glich. Bei Bekanntwerden von entsprechenden
-            Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
-          </p>{' '}
-          <h3>Haftung f&uuml;r Links</h3>{' '}
-          <p>
-            Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf
-            deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir
-            f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr
-            &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist
-            stets der jeweilige Anbieter oder Betreiber der Seiten
-            verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der
-            Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e
-            &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum Zeitpunkt der
-            Verlinkung nicht erkennbar.
-          </p>{' '}
-          <p>
-            Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist
-            jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht
-            zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
-            derartige Links umgehend entfernen.
-          </p>{' '}
-          <h3>Urheberrecht</h3>{' '}
-          <p>
-            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
-            diesen Seiten unterliegen dem deutschen Urheberrecht. Die
-            Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
-            Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes
-            bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors
-            bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r
-            den privaten, nicht kommerziellen Gebrauch gestattet.
-          </p>{' '}
-          <p>
-            Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt
-            wurden, werden die Urheberrechte Dritter beachtet. Insbesondere
-            werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
-            trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten
-            wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
-            Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-          </p>
+          <div className="p-12 w-full lg:w-1/2">
+          <div className="flex align-center text-center">
+            <h1 className="inline my-auto">Impressum</h1>
+            <div className="inline ml-6 my-auto w-16">
+              <Image 
+                className="object-scale rounded"
+                height={66}
+                width={100}
+                alt="German Flag"
+                src="/de_flag.bmp"
+              />
+              </div>
+              </div>
+
+            <p>Zuletzt geändert: April 2021</p>
+            <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+            <p>
+              Carolina Kowanz
+              <br />
+              Gartenfelder Str. 65
+              <br />
+              13599 Berlin
+            </p>
+            <h2>Kontakt</h2>
+            <p>E-Mail: carokowanzspanish@gmail.com</p>
+            <h2>Umsatzsteuer-ID</h2>
+            <p>
+              Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a
+              Umsatzsteuergesetz:
+              <br />
+              DE336750119
+            </p>
+            <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+            <p>
+              Berufsbezeichnung: Sprachlehrerin
+              <br />
+            </p>
+            <h2>EU-Streitschlichtung</h2>
+            <p>
+              Die Europ&auml;ische Kommission stellt eine Plattform zur
+              Online-Streitbeilegung (OS) bereit:{' '}
+              <a
+                href="https://ec.europa.eu/consumers/odr/"
+                target="_blank"
+                rel="noopener noreferrer">
+                https://ec.europa.eu/consumers/odr/
+              </a>
+              .<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.
+            </p>
+            <h2>
+              Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle
+            </h2>
+            <p>
+              Wir sind nicht bereit oder verpflichtet, an
+              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+              teilzunehmen.
+            </p>
+            <h3>Haftung f&uuml;r Inhalte</h3>{' '}
+            <p>
+              Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG
+              f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen
+              Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir
+              als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte
+              oder gespeicherte fremde Informationen zu &uuml;berwachen oder
+              nach Umst&auml;nden zu forschen, die auf eine rechtswidrige
+              T&auml;tigkeit hinweisen.
+            </p>{' '}
+            <p>
+              Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
+              Informationen nach den allgemeinen Gesetzen bleiben hiervon
+              unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst
+              ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
+              m&ouml;glich. Bei Bekanntwerden von entsprechenden
+              Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+            </p>{' '}
+            <h3>Haftung f&uuml;r Links</h3>{' '}
+            <p>
+              Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf
+              deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir
+              f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr
+              &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist
+              stets der jeweilige Anbieter oder Betreiber der Seiten
+              verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der
+              Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e
+              &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum Zeitpunkt der
+              Verlinkung nicht erkennbar.
+            </p>{' '}
+            <p>
+              Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist
+              jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht
+              zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
+              derartige Links umgehend entfernen.
+            </p>{' '}
+            <h3>Urheberrecht</h3>{' '}
+            <p>
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
+              diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+              Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
+              Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes
+              bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors
+              bzw. Erstellers. Downloads und Kopien dieser Seite sind nur
+              f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet.
+            </p>{' '}
+            <p>
+              Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt
+              wurden, werden die Urheberrechte Dritter beachtet. Insbesondere
+              werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+              trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
+              bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
+              Rechtsverletzungen werden wir derartige Inhalte umgehend
+              entfernen.
+            </p>
+          </div>
         </div>
       </div>
     </div>

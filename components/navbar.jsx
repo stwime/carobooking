@@ -8,7 +8,7 @@ const navigation = [
   // { name: 'About', href: '/about' },
   // { name: 'Practice', href: '/practice' },
   // { name: 'Podcast', href: '/podcast' },
-  { name: 'Impressum', href: '/legal' },
+  { name: 'Imprint', href: '/legal' },
   { name: 'Book', href: '/book' },
 ];
 
@@ -49,7 +49,7 @@ export default function Navbar() {
                     'sm:visible invisible handwritten toggleColour no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-white'
                   }
                   href="/">
-                  carokowanzspanish.com
+                  Spanish with Caro
                 </a>
               </div>
             <div className="flex-1 flex justify-end">

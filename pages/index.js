@@ -22,10 +22,11 @@ const Home = () => (
           <h1 className="my-4 text-5xl font-bold leading-tight">
             Start learning Spanish today!
           </h1>
-          <p className="leading-normal text-2xl mb-8">
-            Lean Spanish with a professional, certified teacher - and get
-            speaking, improve or perfect your Spanish in no time!
-          </p>
+          <h2 className="leading-normal text-2xl mb-8">
+            Lean Spanish online with a professional, certified teacher. <br />
+            Start speaking, improve and perfect your Spanish in no time!<br />
+            Or join a <b>free Spanish group lesson</b> today!
+          </h2>
           <a
             href="/book"
             className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
@@ -34,8 +35,12 @@ const Home = () => (
         </div>
         <div className="w-full md:w-2/5 py-6 text-center">
           <div className="w-full md:w-4/5 z-50">
-            <div className="m-12 h-96 w-96 relative">
-              <Image layout="fill" src="/herotest.png" />
+            <div className="mx-auto sm:h-96 sm:w-96 md:m-12 w-48 h-48 self-center relative">
+              <Image
+                layout="fill"
+                alt="Carolina Portrait"
+                src="/herotest.png"
+              />
             </div>
           </div>
         </div>
@@ -55,20 +60,63 @@ const Home = () => (
 
         <SellingPoint
           title={'Professional Teacher'}
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula. Bla bla,
-              having a real teacher is so great, it's true!"
+          text={
+            <>
+              <p className="mb-6">
+                I have been teaching Spanish for many years now, helping
+                hundreds of students learn Spanish my beautiful language,
+                following a structured curriculum and providing the best
+                learning experience possible.
+              </p>
+              <p className="mb-6">
+                I use a variety of learning activities to focus on finding your
+                weak areas and improve your Spanish.
+              </p>
+              <p>All levels are welcome, see you in class!</p>
+            </>
+          }
           sideComponent={<OnlineLearning />}
         />
         <SellingPoint
-          title={'The quickest way to learn'}
-          text="Learning with a personal teacher in lessons tailored to you has proven again and again to be the quickest way to improve or pick up a new language"
+          title={'Group lessons'}
+          text={
+            <p>
+              Learn grammar and practice conversation with other students at the
+              same level as you. Small group online classes are the perfect
+              option if you want to quickly build conversational skills and
+              confidence while socializing with other students from all around
+              the world.
+              <ul>
+                <li>Different, useful class topics weekly.</li>
+
+                <li>Small class size: 4-8 students on average.</li>
+
+                <li>All materials before the lesson.</li>
+              </ul>
+            </p>
+          }
           sideComponent={<ConnectedWorld />}
           reverse={true}
         />
         <SellingPoint
-          title={'Individual Lessons & Material'}
-          text="Learn at your own pace or join a group if you want idk"
+          title={'Individual Lessons'}
+          text={
+            <>
+              <p className="mb-3">
+                A complete and personalized Spanish course for all students.
+              </p>
+              <p className="mb-3">
+                Lessons are available for all levels: Beginner, Intermediate and
+                Advanced. Each lesson covers all Spanish skills: Reading,
+                writing, listening and speaking, alternatively we can focus on
+                any skill that you want help with, or a combination of them.
+              </p>
+              <p className="mb-3">
+                We can also focus on any other areas you want to improve, such
+                as conversation, vocabulary or pronunciation.
+              </p>
+            </>
+          }
           sideComponent={<Reading />}
         />
       </div>
@@ -103,40 +151,45 @@ const Home = () => (
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div className="text-black p-12 ">
-          <p className="m-6">
-            From my earliest childhood memories, I remember loving to play
-            “school.” This love of the entire process of learning has followed
-            me throughout the changes in my career path.{' '}
-          </p>
-          <p className="m-6">
-            In any role, regardless of whether I am acting in the formal roles
-            of “instructor” or “student,” I seek to learn and to teach. My main
-            goal in any teaching endeavor is to encourage the student to explore
-            research and knowledge in order to incorporate it into their own
-            professional point of view.
-          </p>
-          <p className="m-6">
-            Teaching in this field requires one to attend to both the technical
-            knowledge a student needs and to their evolution as a reflective
-            professional and person. In encouraging this process, I believe it
-            is important to view the student-teacher relationship as one that is
-            co-constructed. Much as I hope students will learn from me, I
-            equally appreciate the learning I take from my students. In the
-            classroom space, I believe that authority and the responsibility for
-            learning is mutually shared.Part of this co-construction requires
-            that I reflect on my own approach, style and biases in the learning
-            process. It also requires that I recognize that students learn
-            differently, have differing levels of learning abilities, and that
-            my teaching must be sensitive to the individual needs of each
-            student.{' '}
-          </p>
-          <p className="m-6">
-            In approaching my teaching, I attempt to accommodate the myriad of
-            learning styles present in the classroom. I utilize a blend of
-            approaches, including When it comes to education, the process is
-            often the product, and I continually learn as I teach.
-          </p>
+        <div className="text-black p-12 flex flex-wrap">
+          <div className="w-full lg:w-7/12">
+            <p className="m-6">
+              I am a graduated Spanish Teacher for foreigners.
+            </p>
+            <p className="m-6">
+              {' '}
+              Teaching has been a passion of mine from a very early age, I love
+              watching people benefit and change for the better due to the
+              education they are receiving.{' '}
+            </p>
+            <p className="m-6">
+              As a foreign language learner myself, I can relate to my students
+              and understand the process it takes to become fluent. My classes
+              will be adapted to your level and preferences. We can have
+              conversation classes, where we will focus on pronunciation and
+              fluency, we may also have classes where we will focus on grammar
+              and vocabulary.{' '}
+            </p>
+            <p className="m-6">
+              I use a variety of learning activities to focus on finding your
+              weak areas and improve your Spanish. I encourage my students and
+              get excited about their progress.{' '}
+            </p>
+            <p className="m-6">
+              I invest in my students and provide solid support during their
+              language learning journey with me!
+            </p>
+            <p className="m-6"></p>
+          </div>
+          <div className="w-full lg:w-5/12 h-auto my-auto p-6">
+            <Image
+              className="object-scale rounded"
+              height={766}
+              width={1149}
+              alt="Carolina with Students"
+              src="/students.jpg"
+            />
+          </div>
         </div>
       </div>
     </section>
