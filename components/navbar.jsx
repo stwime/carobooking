@@ -9,7 +9,7 @@ const navigation = [
   // { name: 'Practice', href: '/practice' },
   // { name: 'Podcast', href: '/podcast' },
   { name: 'Imprint', href: '/legal' },
-  { name: 'Book', href: '/book' },
+  { name: 'Book now!', href: '/book', highlight: true },
 ];
 
 function classNames(...classes) {
@@ -62,7 +62,7 @@ export default function Navbar() {
                       className={classNames(
                         item.current
                           ? 'bg-gray-900 text-white'
-                          : 'text-gray-50 hover:bg-gray-900 hover:text-white',
+                          : item.highlight ? 'bg-white rounded-md text-black hover:bg-gray-200' : 'text-gray-50 hover:bg-gray-900 hover:text-white',
                         'lg:px-3 py-2 px-1 rounded-md text-sm font-bold'
                       )}
                       aria-current={item.current ? 'page' : undefined}>
