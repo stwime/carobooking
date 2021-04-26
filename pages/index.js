@@ -24,7 +24,8 @@ const Home = () => (
           </h1>
           <h2 className="leading-normal text-2xl mb-8">
             Lean Spanish online with a professional, certified teacher. <br />
-            Start speaking, improve and perfect your Spanish in no time!<br />
+            Start speaking, improve and perfect your Spanish in no time!
+            <br />
             Or join a <b>free Spanish group lesson</b> today!
           </h2>
           <a
@@ -121,7 +122,7 @@ const Home = () => (
         />
       </div>
     </section>
-    <section className="bg-gray-100 py-8">
+    {/* <section className="bg-gray-100 py-8">
       <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Get to know me
@@ -142,7 +143,7 @@ const Home = () => (
           </div>
         </div>
       </div>
-    </section>
+        </section> */}
     <section className="bg-white border-b py-8">
       <div className="container mx-auto flex flex-wrap pt-4 pb-12">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
