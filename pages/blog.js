@@ -22,7 +22,7 @@ export default function blog({posts}) {
           </h1>
             {
                 posts.map((blogPost, index) => 
-                    <BlogPost title={blogPost.title} key={blogPost.title} text={blogPost.text} level={blogPost.level} priority={index < 2} imageAlt={blogPost.image.fields.title} imagePath={"https:"+blogPost.image.fields.file.url} reverse={Boolean(index%2)}></BlogPost>
+                    <BlogPost blogPost={blogPost} key={blogPost.title}  reverse={Boolean(index%2)}></BlogPost>
                 )
             }
                 </div>
