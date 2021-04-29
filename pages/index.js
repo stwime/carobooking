@@ -38,6 +38,7 @@ const Home = () => (
           <div className="w-full md:w-4/5 z-50">
             <div className="mx-auto sm:h-96 sm:w-96 md:m-12 w-48 h-48 self-center relative">
               <Image
+                priority={true}
                 layout="fill"
                 alt="Carolina Portrait"
                 src="/herotest.png"

@@ -24,6 +24,7 @@ export default function LegalPage() {
                 className="object-scale rounded"
                 height={66}
                 width={100}
+                priority={true}
                 alt="EU Flag"
                 src="/eu_flag.bmp"
               />
@@ -184,6 +185,7 @@ export default function LegalPage() {
                 className="object-scale rounded"
                 height={66}
                 width={100}
+                priority={true}
                 alt="German Flag"
                 src="/de_flag.bmp"
               />

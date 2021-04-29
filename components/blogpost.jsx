@@ -7,18 +7,21 @@ export default function BlogPost({
   text,
   level,
   imagePath,
+  imageAlt="Blogpost Image",
   reverse = false,
+  priority = false
 }) {
   const additionalClasses = reverse ? 'flex-col-reverse sm:flex-row' : '';
   const imageComponent = (
     <div className="px-20 w-5/12 max-h-screen p-6">
     <div className="w-full h-full sm:invisible md:visible relative">
       <Image
-        alt="Blogpost Image"
+        alt={imageAlt}
         layout="fill"
         objectFit="cover"
         className="object-scale rounded"
         src={imagePath}
+        priority={priority}
       />
     </div>
     </div>
