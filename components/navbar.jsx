@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   // { name: 'About', href: '/about' },
   // { name: 'Practice', href: '/practice' },
-  // { name: 'Podcast', href: '/podcast' },
+  //{ name: 'Social Media', href: '/socials' },
   { name: 'Imprint', href: '/legal' },
   { name: 'Book now!', href: '/book', highlight: true },
 ];

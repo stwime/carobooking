@@ -10,7 +10,6 @@ const Navbar = dynamic(() => import("../components/navbar.jsx"), {
 });
 
 export default function blog({posts}) {
-  console.log(posts)
     return (
         <div className="">
             <Navbar/>

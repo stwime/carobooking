@@ -51,7 +51,7 @@ const Home = () => (
     <div className="relative md:-mt-1 xl:-mt-12 mt-0 gradient">
       <Waves />
     </div>
-    <section className="bg-white border-b py-8">
+    <section className="bg-light-gray border-b py-8">
       <div className="container max-w-5xl mx-auto m-8">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Your personal spanish teacher
