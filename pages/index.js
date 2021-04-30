@@ -227,9 +227,13 @@ const Home = () => (
       <h2 className="my-4 text-3xl leading-tight">
         Book your first lesson and start learning today!
       </h2>
-      <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        <a href="/book">Book now!</a>
-      </button>
+      <div className="mt-12">
+        <a
+          className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          href="/book">
+          Book now!
+        </a>
+      </div>
     </section>
   </div>
 );
