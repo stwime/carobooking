@@ -21,15 +21,14 @@ export default function App({ Component, pageProps }) {
         location="bottom"
         disableStyles={true}
         buttonText="Agree!"
-        cookieName="hasConsentedToCookies"
-        containerClasses="flex h-auto md:h-12 bg-gray-300 sticky bottom-0 "
+        containerClasses="flex h-auto md:h-12 bg-gray-300 sticky bottom-0 z-50"
         sameSite="strict"
         contentClasses="flex items-center m-4"
         buttonClasses="m-2 bg-white rounded p-2 py-1 max-h-12 shadow hover:text-white hover:bg-gray-800 transition duration-150"
         buttonWrapperClasses="flex align-middle"
         expires={150}
         onAccept={() => {
-         // Load google analytics
+         window.location.reload();
         }}
       >
         We use cookies for analytics and for an enhanced user experience, such as embedding content from other websites.

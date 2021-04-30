@@ -6,6 +6,8 @@ import Reading from '../components/svgs/reading';
 import Waves from '../components/svgs/waves';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import ExternalContentWrapper from '../components/externalcontentwrapper';
+import { getCookieConsentValue } from 'react-cookie-consent';
 
 const Navbar = dynamic(() => import('../components/navbar.jsx'), {
   ssr: false,
@@ -123,7 +125,7 @@ const Home = () => (
         />
       </div>
     </section>
-    {/* <section className="bg-gray-100 py-8">
+    <section className="bg-gray-100 py-8">
       <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Get to know me
@@ -132,19 +134,21 @@ const Home = () => (
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div className="flex content-center lg:w-full rounded-lg p-1 sm:p-6 z-10">
-          <div className="flex w-full lg:w-4/5 mx-auto overflow-hidden">
+          <div className="flex w-full lg:w-4/5 h-auto px-4 mx-auto overflow-hidden">
+            <ExternalContentWrapper name="Youtube" alternateLink="https://www.youtube.com/v/55OmhwF0ybQ">
             <iframe
-              width="1120"
-              height="630"
+              width="100%"
+              height="645px"
               src="https://www.youtube.com/embed/55OmhwF0ybQ"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
+              </ExternalContentWrapper>
           </div>
         </div>
       </div>
-        </section> */}
+        </section>
     <section className="bg-white border-b py-8">
       <div className="container mx-auto flex flex-wrap pt-4 pb-12">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
