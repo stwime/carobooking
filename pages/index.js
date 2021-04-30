@@ -8,6 +8,8 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import ExternalContentWrapper from '../components/externalcontentwrapper';
 import { getCookieConsentValue } from 'react-cookie-consent';
+import InstagramIcon from '../components/svgs/instagram.jsx';
+import HeadPhonesIcon from '../components/svgs/headphones.jsx';
 
 const Navbar = dynamic(() => import('../components/navbar.jsx'), {
   ssr: false,
@@ -19,7 +21,7 @@ const Home = () => (
     style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
     <Navbar />
     <div className="pt-24">
-      <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div className="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
           <h1 className="my-4 text-5xl font-bold leading-tight">
             Start learning Spanish today!
@@ -136,19 +138,19 @@ const Home = () => (
         <div className="flex content-center lg:w-full rounded-lg p-1 sm:p-6 z-10">
           <div className="flex w-full lg:w-4/5 h-auto px-4 mx-auto overflow-hidden">
             <ExternalContentWrapper name="Youtube" alternateLink="https://www.youtube.com/v/55OmhwF0ybQ">
-            <iframe
-              width="100%"
-              height="645px"
-              src="https://www.youtube.com/embed/55OmhwF0ybQ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-              </ExternalContentWrapper>
+              <iframe
+                width="100%"
+                height="645px"
+                src="https://www.youtube.com/embed/55OmhwF0ybQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </ExternalContentWrapper>
           </div>
         </div>
       </div>
-        </section>
+    </section>
     <section className="bg-white border-b py-8">
       <div className="container mx-auto flex flex-wrap pt-4 pb-12">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -237,9 +239,18 @@ const Home = () => (
           href="/book">
           Book now!
         </a>
+        <div className="w-full mb-4">
+          <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 mt-16 py-0 rounded-t"></div>
+        </div>
+        <div className="flex flex-col justify-center align-middle items-center">
+        <p className="mt-8 md:mt-10 text-xl">Start learning right now on </p>
+        <a className="my-4" href="https://instagram.com/carokowanzspanish/reels" rel="noreferrer" target="_blank" ><div className="text-2xl font-semibold flex-inline hover:bg-gray-100 hover:text-black hover:bg-opacity-40 transition duration-100 rounded-xl p-2 px-4"><InstagramIcon className="inline w-12 h-12 p-2" />Instagram</div></a>
+        <p className="text-xl">and listen to my podcast on</p>
+        <a className="my-4" href="https://open.spotify.com/show/49BzfxoYpOzrJlj60vwnuu" rel="noreferrer" target="_blank" ><div className="text-2xl font-semibold hover:bg-gray-100 hover:bg-opacity-40 transition duration-100 rounded-xl hover:text-black p-2 px-4"><HeadPhonesIcon className="inline w-12 h-12 p-2" />Spotify</div></a>
+      </div>
       </div>
     </section>
-  </div>
+  </div >
 );
 
 export default Home;
