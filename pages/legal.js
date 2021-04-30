@@ -203,6 +203,7 @@ export default function LegalPage() {
             </p>
             <h2>Kontakt</h2>
             <p>E-Mail: carokowanzspanish@gmail.com</p>
+            <p>Telefon: +49 43963509</p>
             <h2>Umsatzsteuer-ID</h2>
             <p>
               Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a

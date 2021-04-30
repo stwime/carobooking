@@ -1,5 +1,14 @@
 import React, { useRef, useState } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
+import PlayIcon from './svgs/play.jsx'
+import PauseIcon from './svgs/pause.jsx'
+
+const stopOtherAudioSources = () => {
+  const audio_elements = document.getElementsByTagName("audio");
+  for (let element of audio_elements){
+    element.pause();
+  }
+}
 
 export default function AudioPlayer({ src }) {
   const audioElement = useRef(null);
@@ -16,7 +25,7 @@ export default function AudioPlayer({ src }) {
   }
 
   return (
-    <div className="w-96 h-16 my-2">
+    <div className="w-full sm:w-96 h-16 my-2">
       <ReactAudioPlayer
         listenInterval={500}
         onListen={(e) => setCurrentPlayTime(e)}
@@ -35,6 +44,7 @@ export default function AudioPlayer({ src }) {
                     setCurrentlyPlaying(false);
                   }
                   else{
+                    stopOtherAudioSources();
                     audioElement.current &&
                     audioElement.current.audioEl.current.play()
                     setCurrentlyPlaying(true);
@@ -43,22 +53,10 @@ export default function AudioPlayer({ src }) {
               }
               }>
               {currentlyPlaying ? (
-                <svg
-                  className="w-6 h-6 transition-all"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20">
-                  <path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z" />
-                </svg>
-              ) : (
-                <svg
-                  className=" w-6 h-6"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="-6 0 30 30">
-                  <path d="M5,5 15,15 5,25z" />
-                </svg>
-              )}
+                     <PlayIcon /> 
+              ) : 
+                 <PauseIcon />
+              }
             </div>
             <div className="w-full ml-4">
               <div className="h-2 border w-full rounded flex items-center">

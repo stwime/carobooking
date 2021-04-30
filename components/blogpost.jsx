@@ -16,7 +16,7 @@ export default function BlogPost({
 }) {
   const additionalClasses = reverse ? 'flex-col-reverse sm:flex-row' : '';
   const imageComponent = (
-    <div className="px-20 w-5/12 max-h-screen p-6">
+    <div className="px-8 lg:px-16 w-5/12 max-h-screen p-6">
       <div className="w-full h-full sm:invisible md:visible relative">
         <Image
           alt={blogPost.image.fields.title}
