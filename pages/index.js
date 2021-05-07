@@ -45,7 +45,7 @@ const Home = () => (
                 priority={true}
                 layout="fill"
                 alt="Carolina Portrait"
-                src="/herotest.png"
+                src="/newheromaybe.png"
               />
             </div>
           </div>
