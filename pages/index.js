@@ -27,7 +27,7 @@ const Home = () => (
             Start learning Spanish today!
           </h1>
           <h2 className="leading-normal text-2xl mb-8">
-            Lean Spanish online with a professional, certified teacher. <br />
+            Learn Spanish online with a professional, certified teacher. <br />
             Start speaking, improve and perfect your Spanish in no time!
             <br />
             Or join a <b>free Spanish group lesson</b> today!
