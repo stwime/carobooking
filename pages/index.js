@@ -217,7 +217,7 @@ export async function getStaticProps() {
   const sellingPoints = await res2.map((p) => {
     return p.fields;
   });
-  console.log(sellingPoints.sort((a,b) => a.order - b.order))
+
   return {
     props: {
       frontpageSettings,
