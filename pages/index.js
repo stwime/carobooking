@@ -23,7 +23,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
     <Navbar />
     <div className="pt-24">
-      <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div className="container p-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div className="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
           <h1 className="my-4 text-5xl font-bold leading-tight">
             {frontpageSettings.headerTitle}
@@ -74,7 +74,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
               <div className="relative w-full h-48 sm:h-64 mx-auto">
                 <Image
                   layout="fill"
-                  alt={sellingPoint.image.fields.file.name}
+                  alt={sellingPoint.image.fields.title}
                   src={'https:' + sellingPoint.image.fields.file.url}
                 />
               </div>
@@ -217,7 +217,7 @@ export async function getStaticProps() {
   const sellingPoints = await res2.map((p) => {
     return p.fields;
   });
-
+  console.log(sellingPoints[0].image.fields)
   return {
     props: {
       frontpageSettings,

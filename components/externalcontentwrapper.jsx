@@ -23,7 +23,7 @@ export default function ExternalContentWrapper({
           <div className="w-full h-96 bg-gray-200 rounded flex items items-center justify-center relative">
             <div className="z-10 bg-white bg-opacity-90 rounded m-2 p-4 md:p-6 lg:p-10">
               <p className="text-2xl text-gray-700 text-center mb-8">External Content</p>
-              <p className=" text-gray-700 text-center">
+              <div className=" text-gray-700 text-center">
                 Please
                 <a
                   className="text-black cursor-pointer bg-white shadow border rounded-lg p-2 m-2"
@@ -40,7 +40,7 @@ export default function ExternalContentWrapper({
                     {name}
                   </a>
                 </p>
-              </p>
+              </div>
             </div>
             <Image
               alt="Video Teching Online Introduction Thumbnail"
