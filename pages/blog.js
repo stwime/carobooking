@@ -3,7 +3,7 @@ import BlogPost from '../components/blogpost'
 import Waves from '../components/svgs/waves';
 import dynamic from 'next/dynamic';
 
-import {fetchEntries} from '../helpers/blogposts';
+import {fetchEntries} from '../helpers/fetchContent';
 
 const Navbar = dynamic(() => import("../components/navbar.jsx"), {
   ssr: false,
@@ -31,11 +31,10 @@ export default function blog({posts}) {
 }
 
 export async function getStaticProps() {
-    const res = await fetchEntries();
+    const res = await fetchEntries('blogpost');
     const posts = await res.map((p) => {
       return p.fields
     })
-  
     return {
       props: {
         posts,

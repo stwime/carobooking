@@ -6,6 +6,6 @@ export default function calendlycontainer() {
         src="https://calendly.com/carokowanzspanish"
         width="100%"
         height="100%"
-        frameborder="0"></iframe>
+        frameBorder={0}></iframe>
   );
 }

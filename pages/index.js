@@ -10,12 +10,14 @@ import ExternalContentWrapper from '../components/externalcontentwrapper';
 import { getCookieConsentValue } from 'react-cookie-consent';
 import InstagramIcon from '../components/svgs/instagram.jsx';
 import HeadPhonesIcon from '../components/svgs/headphones.jsx';
+import { fetchEntries } from '../helpers/fetchContent';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 const Navbar = dynamic(() => import('../components/navbar.jsx'), {
   ssr: false,
 });
 
-const Home = () => (
+const Home = ({ frontpageSettings, sellingPoints }) => (
   <div
     className="leading-normal tracking-normal text-white gradient"
     style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
@@ -24,14 +26,13 @@ const Home = () => (
       <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div className="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
           <h1 className="my-4 text-5xl font-bold leading-tight">
-            Start learning Spanish today!
+            {frontpageSettings.headerTitle}
           </h1>
-          <h2 className="leading-normal text-2xl mb-8">
-            Learn Spanish online with a professional, certified teacher. <br />
-            Start speaking, improve and perfect your Spanish in no time!
-            <br />
-            Or join a <b>free Spanish group lesson</b> today!
-          </h2>
+          <div
+            className="leading-normal text-2xl mb-8"
+            dangerouslySetInnerHTML={{
+              __html: documentToHtmlString(frontpageSettings.headerText),
+            }}></div>
           <a
             href="/book"
             className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
@@ -45,7 +46,7 @@ const Home = () => (
                 priority={true}
                 layout="fill"
                 alt="Carolina Portrait"
-                src="/herotest.png"
+                src={'https:' + frontpageSettings.heroImage.fields.file.url}
               />
             </div>
           </div>
@@ -58,73 +59,28 @@ const Home = () => (
     <section className="bg-light-gray border-b py-8">
       <div className="container max-w-5xl mx-auto m-8">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Your personal spanish teacher
+          {frontpageSettings.contentHeading}
         </h1>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-
-        <SellingPoint
-          title={'Professional Teacher'}
-          text={
-            <>
-              <p className="mb-6">
-                I have been teaching Spanish for many years now, helping
-                hundreds of students learn Spanish my beautiful language,
-                following a structured curriculum and providing the best
-                learning experience possible.
-              </p>
-              <p className="mb-6">
-                I use a variety of learning activities to focus on finding your
-                weak areas and improve your Spanish.
-              </p>
-              <p>All levels are welcome, see you in class!</p>
-            </>
-          }
-          sideComponent={<OnlineLearning />}
-        />
-        <SellingPoint
-          title={'Group lessons'}
-          text={
-            <p>
-              Learn grammar and practice conversation with other students at the
-              same level as you. Small group online classes are the perfect
-              option if you want to quickly build conversational skills and
-              confidence while socializing with other students from all around
-              the world.
-              <ul>
-                <li>Different, useful class topics weekly.</li>
-
-                <li>Small class size: 4-8 students on average.</li>
-
-                <li>All materials before the lesson.</li>
-              </ul>
-            </p>
-          }
-          sideComponent={<ConnectedWorld />}
-          reverse={true}
-        />
-        <SellingPoint
-          title={'Individual Lessons'}
-          text={
-            <>
-              <p className="mb-3">
-                A complete and personalized Spanish course for all students.
-              </p>
-              <p className="mb-3">
-                Lessons are available for all levels: Beginner, Intermediate and
-                Advanced. Each lesson covers all Spanish skills: Reading,
-                writing, listening and speaking, alternatively we can focus on
-                any skill that you want help with, or a combination of them.
-              </p>
-              <p className="mb-3">
-                We can also focus on any other areas you want to improve, such
-                as conversation, vocabulary or pronunciation.
-              </p>
-            </>
-          }
-          sideComponent={<Reading />}
-        />
+        {sellingPoints.map((sellingPoint) => (
+          <SellingPoint
+            title={sellingPoint.title}
+            key={sellingPoint.title}
+            innerContent={documentToHtmlString(sellingPoint.text)}
+            reverse={sellingPoint.imageToTheLeft}
+            sideComponent={
+              <div className="relative w-full h-48 sm:h-64 mx-auto">
+                <Image
+                  layout="fill"
+                  alt={sellingPoint.image.fields.file.name}
+                  src={'https:' + sellingPoint.image.fields.file.url}
+                />
+              </div>
+            }
+          />
+        ))}
       </div>
     </section>
     <section className="bg-gray-100 py-8">
@@ -137,15 +93,17 @@ const Home = () => (
         </div>
         <div className="flex content-center lg:w-full rounded-lg p-1 sm:p-6 z-10">
           <div className="flex w-full lg:w-4/5 h-auto px-4 mx-auto overflow-hidden">
-            <ExternalContentWrapper name="Youtube" alternateLink="https://www.youtube.com/v/55OmhwF0ybQ">
+            <ExternalContentWrapper
+              name="Youtube"
+              alternateLink="https://www.youtube.com/v/55OmhwF0ybQ">
               <iframe
                 width="100%"
                 height="645px"
                 src="https://www.youtube.com/embed/55OmhwF0ybQ"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+                allowFullScreen></iframe>
             </ExternalContentWrapper>
           </div>
         </div>
@@ -160,35 +118,13 @@ const Home = () => (
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div className="text-black p-12 flex flex-wrap">
-          <div className="w-full lg:w-7/12">
-            <p className="m-6">
-              I am a graduated Spanish Teacher for foreigners.
-            </p>
-            <p className="m-6">
-              {' '}
-              Teaching has been a passion of mine from a very early age, I love
-              watching people benefit and change for the better due to the
-              education they are receiving.{' '}
-            </p>
-            <p className="m-6">
-              As a foreign language learner myself, I can relate to my students
-              and understand the process it takes to become fluent. My classes
-              will be adapted to your level and preferences. We can have
-              conversation classes, where we will focus on pronunciation and
-              fluency, we may also have classes where we will focus on grammar
-              and vocabulary.{' '}
-            </p>
-            <p className="m-6">
-              I use a variety of learning activities to focus on finding your
-              weak areas and improve your Spanish. I encourage my students and
-              get excited about their progress.{' '}
-            </p>
-            <p className="m-6">
-              I invest in my students and provide solid support during their
-              language learning journey with me!
-            </p>
-            <p className="m-6"></p>
-          </div>
+          <div
+            className="w-full lg:w-7/12 p-margins"
+            dangerouslySetInnerHTML={{
+              __html: documentToHtmlString(
+                frontpageSettings.teachingPhilosophyText
+              ),
+            }}></div>
           <div className="w-full lg:w-5/12 h-auto my-auto p-6">
             <Image
               className="object-scale rounded"
@@ -243,14 +179,51 @@ const Home = () => (
           <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 mt-16 py-0 rounded-t"></div>
         </div>
         <div className="flex flex-col justify-center align-middle items-center">
-        <p className="mt-8 md:mt-10 text-xl">Start learning right now on </p>
-        <a className="my-4" href="https://instagram.com/carokowanzspanish/reels" rel="noreferrer" target="_blank" ><div className="text-2xl font-semibold flex-inline hover:bg-gray-100 hover:text-black hover:bg-opacity-40 transition duration-100 rounded-xl p-2 px-4"><InstagramIcon className="inline w-12 h-12 p-2" />Instagram</div></a>
-        <p className="text-xl">and listen to my podcast on</p>
-        <a className="my-4" href="https://open.spotify.com/show/49BzfxoYpOzrJlj60vwnuu" rel="noreferrer" target="_blank" ><div className="text-2xl font-semibold hover:bg-gray-100 hover:bg-opacity-40 transition duration-100 rounded-xl hover:text-black p-2 px-4"><HeadPhonesIcon className="inline w-12 h-12 p-2" />Spotify</div></a>
-      </div>
+          <p className="mt-8 md:mt-10 text-xl">Start learning right now on </p>
+          <a
+            className="my-4"
+            href="https://instagram.com/carokowanzspanish/reels"
+            rel="noreferrer"
+            target="_blank">
+            <div className="text-2xl font-semibold flex-inline hover:bg-gray-100 hover:text-black hover:bg-opacity-40 transition duration-100 rounded-xl p-2 px-4">
+              <InstagramIcon className="inline w-12 h-12 p-2" />
+              Instagram
+            </div>
+          </a>
+          <p className="text-xl">and listen to my podcast on</p>
+          <a
+            className="my-4"
+            href="https://open.spotify.com/show/49BzfxoYpOzrJlj60vwnuu"
+            rel="noreferrer"
+            target="_blank">
+            <div className="text-2xl font-semibold hover:bg-gray-100 hover:bg-opacity-40 transition duration-100 rounded-xl hover:text-black p-2 px-4">
+              <HeadPhonesIcon className="inline w-12 h-12 p-2" />
+              Spotify
+            </div>
+          </a>
+        </div>
       </div>
     </section>
-  </div >
+  </div>
 );
+
+export async function getStaticProps() {
+  const res = await fetchEntries('siteSettings');
+  const frontpageSettings = await res.map((p) => {
+    return p.fields;
+  })[0];
+
+  const res2 = await fetchEntries('sellingPoint');
+  const sellingPoints = await res2.map((p) => {
+    return p.fields;
+  });
+  console.log(sellingPoints.sort((a,b) => a.order - b.order))
+  return {
+    props: {
+      frontpageSettings,
+      sellingPoints: sellingPoints.sort((a,b) => a.order - b.order),
+    },
+  };
+}
 
 export default Home;

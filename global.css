@@ -24,6 +24,10 @@ ul > li{
   font-family: 'Indie Flower', serif;
 }
 
+.p-margins p {
+  margin-top: 1em;
+}
+
 .legal p {
   margin: 1em;
 }
