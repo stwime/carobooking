@@ -33,16 +33,16 @@ export default function BlogPost({
 
   return (
     <div className={'flex flex-wrap mt-2' + additionalClasses}>
-      <div className="w-full mb-4">
+      <div className="w-full mb-1">
         <div className="h-1 mx-auto gradient w-1/4 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
       {reverse && imageComponent}
-      <div className="sm:w-full p-2 md:p-8 md:w-7/12 pt-6 mt-2">
+      <div className="sm:w-full p-4 md:p-8 md:w-7/12 pt-6 mt-2">
         <div className="align-middle">
           <small className="text-sm text-gray-400 mb-4">
             {blogPost.level.toUpperCase()}
           </small>
-          <h3 className="text-5xl text-gray-800 font-bold leading-none mb-8 mt-3">
+          <h3 className="md:text-5xl text-4xl text-gray-800 font-bold leading-none mb-8 mt-3">
             {blogPost.title}
           </h3>
           <div>
