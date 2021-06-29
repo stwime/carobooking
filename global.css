@@ -57,3 +57,16 @@ ul > li{
 .bg-light-gray{
   background-color: #fbfcfd;
 }
+
+.level-beginner{
+  background-color: #db91a9;
+
+}
+
+.level-intermediate{
+  background-color: #fa8562;
+}
+
+.level-advanced{
+  background-color: #f5615c;
+}

@@ -4,10 +4,13 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import ReactAudioPlayer from 'react-audio-player';
 import dynamic from 'next/dynamic';
 
-const AudioPlayer = dynamic(() => import("./audioplayer"), {
+const AudioPlayer = dynamic(() => import('./audioplayer'), {
   ssr: false,
 });
 
+const QuizletEmbed = dynamic(() => import('./quizletmodule'), {
+  ssr: false,
+});
 
 export default function BlogPost({
   blogPost,
@@ -30,7 +33,6 @@ export default function BlogPost({
     </div>
   );
 
-
   return (
     <div className={'flex flex-wrap mt-2' + additionalClasses}>
       <div className="w-full mb-1">
@@ -47,7 +49,7 @@ export default function BlogPost({
           </h3>
           <div>
             {blogPost.audio && (
-                <AudioPlayer  src={blogPost.audio.fields.file.url}/>
+              <AudioPlayer src={blogPost.audio.fields.file.url} />
             )}
           </div>
           <div
@@ -55,6 +57,10 @@ export default function BlogPost({
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(blogPost.text),
             }}></div>
+
+          {blogPost.quizletEmbedLink && (
+            <QuizletEmbed quizletLink={blogPost.quizletEmbedLink} />
+          )}
         </div>
       </div>
       {!reverse && imageComponent}
