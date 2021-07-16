@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head'
 import CookieConsent, { Cookies } from "react-cookie-consent";
-
+import { UserProvider } from '@auth0/nextjs-auth0';
 
 import '../global.css';
 
@@ -29,7 +29,9 @@ export default function App({ Component, pageProps }) {
         <meta name="robots" content="index, follow"></meta>
 
       </Head>
-      <Component {...pageProps} />
+      <UserProvider>
+        <Component {...pageProps} />
+      </UserProvider>
       <CookieConsent
         location="bottom"
         disableStyles={true}

@@ -3,13 +3,14 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
 import InstagramIcon from './svgs/instagram';
 import HeadPhonesIcon from './svgs/headphones';
+import { useUser } from '@auth0/nextjs-auth0';
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Blog', href: '/blog' },
   // { name: 'About', href: '/about' },
   // { name: 'Practice', href: '/practice' },
-  //{ name: 'Social Media', href: '/socials' },
+  { name: 'Courses', href: '/courses' },
   { name: 'Imprint', href: '/legal' },
   { name: 'Book now!', href: '/book', highlight: true },
 ];
@@ -22,6 +23,7 @@ export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
   const router = useRouter();
+  const { user, error, isLoading } = useUser();
 
   const currentNavigationItems = navigation.map((entry) => {
     return { ...entry, current: router.pathname === entry.href };
@@ -73,6 +75,9 @@ export default function Navbar() {
                       {item.name}
                     </a>
                   ))}
+                   {user && <a href='/profile' className="lg:px-3 py-2 px-1 rounded-md text-sm font-bold text-gray-50 hover:bg-gray-900 hover:text-white">My Profile</a>}
+                  {!user && <a href='/api/auth/login' className="lg:px-3 py-2 px-1 rounded-md text-sm font-bold text-gray-50 hover:bg-gray-900 hover:text-white">Login</a>}
+                  {user && <a href='/api/auth/logout' className="lg:px-3 py-2 px-1 rounded-md text-sm font-bold text-gray-50 hover:bg-gray-900 hover:text-white">Logout</a>}
                   <div className="px-1 text-gray-50 flex align-center justify-center items-center">
                     <a
                       className="px-2 hover:bg-black rounded-md hover:bg-gray-900 p-1"

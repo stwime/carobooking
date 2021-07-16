@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 import {fetchEntries} from '../helpers/fetchContent';
+import CourseCard from '../components/coursecard';
 
 const Navbar = dynamic(() => import("../components/navbar.jsx"), {
   ssr: false,
@@ -25,21 +26,16 @@ export default function blog({posts}) {
           </div>
             <div className="container max-w-8xl mx-auto mx-12">
             <h1 className="w-full mt-12 mb-24 text-5xl font-bold leading-tight text-center text-gray-800">
-                    Blog & Reading Practice
+                    Courses
           </h1>
-          <div className="flex justify-center items-center flex-col">
-          <div className="flex flex-row">
-            <a onClick={() => setCurrentFilter("beginner")} className={"level-beginner "+ filterLinkClasses}>BEGINNER</a>
-            <a onClick={() => setCurrentFilter("intermediate")} className={ "level-intermediate "+ filterLinkClasses} >INTERMEDIATE</a>
-            <a onClick={() => setCurrentFilter("advanced")} className={"level-advanced "+ filterLinkClasses}>ADVANCED</a>
+          <div className="flex justify-center items-center flex-wrap">
+            <CourseCard title="Beginner - Spanish for Travelling" />
+            <CourseCard title="Beginner - Spanish for Travelling" />
+            <CourseCard title="Beginner - Spanish for Travelling" />
+            <CourseCard title="Beginner - Spanish for Travelling" />
+            <CourseCard title="Beginner - Spanish for Travelling" />
           </div>
-          </div>
-            {
-                currentPosts.map((blogPost, index) => 
-                    <BlogPost blogPost={blogPost} key={blogPost.title} reverse={Boolean(index%2)}></BlogPost>
-                )
-            }
-                </div>
+            </div>
         </div>
     )
 }
