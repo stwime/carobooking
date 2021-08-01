@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   // { name: 'About', href: '/about' },
   // { name: 'Practice', href: '/practice' },
-  //{ name: 'Social Media', href: '/socials' },
+  { name: 'Courses', href: '/courses' },
   { name: 'Imprint', href: '/legal' },
   { name: 'Book now!', href: '/book', highlight: true },
 ];
