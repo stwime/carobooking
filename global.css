@@ -10,7 +10,7 @@ body {
   width: 100%;
 }
 
-ul > li{
+ul > li {
   list-style-type: disc;
   margin-left: 1em;
   margin-top: 5px;
@@ -18,7 +18,6 @@ ul > li{
 .gradient {
   background: linear-gradient(90deg, #db91a9 30%, #ffae77 100%);
 }
-
 
 .handwritten {
   font-family: 'Indie Flower', serif;
@@ -31,15 +30,15 @@ ul > li{
 .legal p {
   margin: 1em;
 }
-.legal h1{
+.legal h1 {
   font-weight: 700;
   font-size: 24px;
 }
-.legal h2{
+.legal h2 {
   font-weight: 700;
   font-size: 21px;
 }
-.legal h3{
+.legal h3 {
   font-weight: 600;
   font-size: 20px;
 }
@@ -49,24 +48,27 @@ ul > li{
   font-size: 16px;
 }
 
-.article li p:not(:first-child){
+.article li p:not(:first-child) {
   margin-left: 1em;
   margin-top: 0.5em;
 }
 
-.bg-light-gray{
+.bg-light-gray {
   background-color: #fbfcfd;
 }
 
-.level-beginner{
+.level-beginner {
   background-color: #db91a9;
-
 }
 
-.level-intermediate{
+.level-intermediate {
   background-color: #fa8562;
 }
 
-.level-advanced{
+.level-advanced {
   background-color: #f5615c;
+}
+
+html {
+  scroll-behavior: smooth;
 }

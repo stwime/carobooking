@@ -41,7 +41,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
             Book a Lesson
           </a>
           <a
-            href="/courses"
+            href="#courses"
             className="hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             <span className="absolute -top-3 -left-1 px-2 py-1 mr-3 text-sm font-bold leading-none text-gray-100 bg-green-500 rounded-lg">NEW</span>
             Check out my courses
@@ -66,7 +66,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     <div className="relative md:-mt-1 xl:-mt-12 mt-0 gradient">
       <Waves />
     </div>
-    <section className="bg-light-gray border-b py-8">
+    <section id="courses" className="bg-light-gray border-b py-8">
       <div className="container max-w-7xl mx-auto m-8 px-1">
       <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Courses
