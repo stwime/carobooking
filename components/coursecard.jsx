@@ -1,25 +1,30 @@
 import Image from 'next/image';
 import React from 'react';
 
-export default function CourseCard({ title, url, image }) {
+export default function CourseCard({
+  title,
+  url,
+  image,
+  description,
+  tags = [],
+}) {
   return (
-    <div className="w-4/12 min-w-min bg-gray-100 m-8 rounded-lg">
+    <div className="rounded overflow-hidden shadow-lg bg-white pt-4">
       <a href={url} target="_blank" referrerPolicy="no-referrer">
-      <div>
-        <h2 className="text-3xl text-center text-gray-800 font-bold m-4 min-h-12 leading-none mb-3">
-          {title}
-        </h2>
-        <div className="text-gray-600 w-full md:h-72 h-48">
-          <div className="w-full h-full relative">
-          <Image
-            layout="fill"
-            objectFit="cover"
-            className="object-scale rounded"
-            src={image}
-          />
-           </div>
+        <div className="w-full relative h-48">
+          <Image layout="fill" objectFit="contain" src={image} />
         </div>
-      </div>
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">{title}</div>
+          <p className="text-gray-700 text-base">{description}</p>
+        </div>
+        <div className="px-6 pt-4 pb-2">
+          {tags.map((tag) => (
+            <span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              {tag}
+            </span>
+          ))}
+        </div>
       </a>
     </div>
   );
