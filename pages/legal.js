@@ -18,7 +18,7 @@ export default function LegalPage() {
         <div className="flex legal container max-w-7xl flex-wrap">
           <div className="p-12 w-full lg:w-1/2">
             <div className="flex align-center text-center">
-            <h1 className="inline my-auto">Disclaimer</h1>
+            <h2 className="inline my-auto">Disclaimer</h2>
             <div className="inline ml-6 my-auto w-16">
               <Image 
                 className="object-scale rounded"
@@ -179,7 +179,7 @@ export default function LegalPage() {
           </div>
           <div className="p-12 w-full lg:w-1/2">
           <div className="flex align-center text-center">
-            <h1 className="inline my-auto">Impressum</h1>
+            <h2 className="inline my-auto">Impressum</h2>
             <div className="inline ml-6 my-auto w-16">
               <Image 
                 className="object-scale rounded"

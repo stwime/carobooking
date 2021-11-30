@@ -68,9 +68,9 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     </div>
     <section id="courses" className="bg-light-gray border-b py-8">
       <div className="container max-w-7xl mx-auto m-8 px-1">
-      <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+      <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Courses
-        </h1>
+        </h2>
       <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
             <CourseCard title="The Basics of Spanish" url="https://www.udemy.com/course/learn-spanish-for-beginners-m/?referralCode=22C090CE297EADAE5E99" image="/courses/basics.png" tags={["Beginner", "In English", "5 Lessons"]} description={"This course is designed for absolute beginners. It offers a clear and comprehensive grammatical foundation for acquiring a basic knowledge of the Spanish language. "} />
             <CourseCard title="Spanish for Travel" url="https://www.udemy.com/course/spanish-for-travel/?referralCode=5C0368E610E515ADBD5B" image="/courses/travel.png"  tags={["Beginner/Intermediate", "In English","8 Lessons"]} description={"If you are going on vacation in Spain, Latin America or any Spanish-speaking country then you should know at least some Spanish for your trip. My course is designed to assist you with communicating with the locals."}/>
@@ -81,9 +81,9 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
 
     <section className="bg-light-gray border-b py-8">
       <div className="container max-w-5xl mx-auto m-8 px-1">
-        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           {frontpageSettings.contentHeading}
-        </h1>
+        </h2>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
@@ -108,9 +108,9 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     </section>
     <section className="bg-gray-100 py-8">
       <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Get to know me
-        </h1>
+        </h2>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
@@ -134,9 +134,9 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     </section>
     <section className="bg-white border-b py-8">
       <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Teaching philosophy
-        </h1>
+        </h2>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
@@ -183,9 +183,9 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
       </g>
     </svg>
     <section className="container mx-auto text-center pt-12 pb-36">
-      <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+      <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
         What are you waiting for?
-      </h1>
+      </h2>
       <div className="w-full mb-4">
         <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
@@ -240,7 +240,6 @@ export async function getStaticProps() {
   const sellingPoints = await res2.map((p) => {
     return p.fields;
   });
-  console.log(sellingPoints[0].image.fields)
   return {
     props: {
       frontpageSettings,

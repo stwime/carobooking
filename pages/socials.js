@@ -22,7 +22,7 @@ export default function SocialsPage() {
         <div className="p-2 sm:p-12 lg:p-24">
         <iframe  data-cookiescript="accepted" alt="Please accept cookie policy first" data-src="https://open.spotify.com/embed-podcast/episode/1Fif1COxC9QX8VqGfh9y4y" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
-        <h1 className="w-full my-32 text-5xl font-bold leading-tight text-center text-gray-800">Instagram</h1>
+        <h2 className="w-full my-32 text-5xl font-bold leading-tight text-center text-gray-800">Instagram</h2>
         </div>
       </div>
     </div>
