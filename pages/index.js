@@ -78,11 +78,11 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
           <div className="flex w-full lg:w-4/5 h-auto px-4 mx-auto overflow-hidden">
             <ExternalContentWrapper
               name="Youtube"
-              alternateLink="https://www.youtube.com/v/PZGhr6rOksg">
+              alternateLink="https://www.youtube.com/v/p8pkVL6I7Pk">
               <iframe
                 width="100%"
                 height="645px"
-                src="https://www.youtube.com/embed/PZGhr6rOksg"
+                src="https://www.youtube.com/embed/p8pkVL6I7Pk"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
