@@ -39,7 +39,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
           </h1>
           <div
             className="leading-normal text-2xl mb-8">
-            Learn Spanish online with a professional, certified teacher.
+            Learn Spanish or English online with a professional, certified teacher.
             <br />
 
             Start learning, improve and perfect your language skills in no time!</div>
