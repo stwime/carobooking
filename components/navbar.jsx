@@ -51,7 +51,7 @@ export default function Navbar() {
                   'sm:visible invisible handwritten toggleColour no-underline hover:no-underline font-extrabold text-2xl lg:text-4xl text-white'
                 }
                 href="/">
-                Spanish with Caro
+                Language Teacher Caro Kowanz
               </a>
             </div>
             <div className="flex-1 flex justify-end">

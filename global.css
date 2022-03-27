@@ -71,3 +71,11 @@ ul > li {
 html {
   scroll-behavior: smooth;
 }
+
+.Typewriter {
+  display: inline;
+}
+
+.Typewriter > span {
+  color: #333;
+}

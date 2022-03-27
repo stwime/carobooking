@@ -60,7 +60,7 @@ export default function LegalPage() {
               </li>
               <li>
                 <strong>Website</strong> refers to Carolina Kowanz, accessible
-                from carokowanzspanish.com
+                from carokowanz.com
               </li>
             </ul>
             <h2>Disclaimer</h2>

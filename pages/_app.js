@@ -21,10 +21,10 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Spanish Teacher Carolina Kowanz</title>
+        <title>Language Teacher Caro Kowanz</title>
         <meta
           name="description"
-          content="Your professional, personal spanish teacher. The quickest way to start or improve your Spanish! Book an online lesson or join a free group lesson today"
+          content="Your professional, personal language teacher for Spanish and English. The quickest way to start or improve your language learning! Book an online lesson or join a free group lesson today"
         />
         <meta name="robots" content="index, follow"></meta>
 
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
          window.location.reload();
         }}
       >
-        We use cookies for analytics and for an enhanced user experience, such as embedding content from other websites.
+        We use cookies for analytics and for an enhanced user experience, such as embedding content from Youtube.
       </CookieConsent>
     </>
   );
