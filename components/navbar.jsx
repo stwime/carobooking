@@ -48,10 +48,10 @@ export default function Navbar() {
             <div className="flex-shrink-1 flex items-center justify-start">
               <a
                 className={
-                  'sm:visible invisible handwritten toggleColour no-underline hover:no-underline font-extrabold text-2xl lg:text-4xl text-white'
+                  'sm:visible invisible handwritten toggleColour no-underline hover:no-underline font-extrabold text-3xl lg:mt-8 lg:text-5xl text-white'
                 }
                 href="/">
-                Language Teacher Caro Kowanz
+                Caro Kowanz
               </a>
             </div>
             <div className="flex-1 flex justify-end">
