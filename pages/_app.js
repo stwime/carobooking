@@ -6,18 +6,6 @@ import CookieConsent, { Cookies } from "react-cookie-consent";
 import '../global.css';
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => { 
-    window.$crisp=[];
-    window.CRISP_WEBSITE_ID="57e82f3e-90d9-4920-88fe-2f6d4d64ccb1";
-    (function() {
-      var d = document;
-      var s = d.createElement("script");
-
-      s.src = "https://client.crisp.chat/l.js";
-      s.async = 1;
-      d.getElementsByTagName("head")[0].appendChild(s);
-    })();
-  });
   return (
     <>
       <Head>
