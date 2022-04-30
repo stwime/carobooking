@@ -22,7 +22,7 @@ export default function BookingPage() {
         <div className="relative md:-mt-4 xl:-mt-6 -mt-12 gradient">
             <Waves />
           </div>
-        <div className="pt-12 h-auto bg-gray-100 -mt-20 h-full">
+        <div className="pt-12 h-auto bg-gray-100 lg:-mt-12 mt-2 h-full">
             <CalendlyContainer />
         </div>
       </div>
