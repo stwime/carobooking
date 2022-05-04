@@ -6,7 +6,7 @@ import HeadPhonesIcon from './svgs/headphones';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Blog', href: '/blog' },
+  // { name: 'Blog', href: '/blog' },
   // { name: 'About', href: '/about' },
   // { name: 'Practice', href: '/practice' },
   { name: 'Courses', href: '/courses' },
