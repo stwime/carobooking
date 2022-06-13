@@ -25,7 +25,7 @@ export default function blog({posts}) {
             <Waves />
           </div>
             <div className="container max-w-8xl mx-auto mx-12">
-            <h1 className="w-full mt-12 mb-24 text-5xl font-bold leading-tight text-center text-gray-800">
+            <h1 className="w-full mt-12 mb-2 text-5xl font-bold leading-tight text-center text-gray-800">
                     My courses
           </h1>
           <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
