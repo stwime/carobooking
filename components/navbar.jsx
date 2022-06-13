@@ -76,7 +76,7 @@ export default function Navbar() {
                   <div className="px-1 text-gray-50 flex align-center justify-center items-center">
                     <a
                       className="px-2 hover:bg-black rounded-md hover:bg-gray-900 p-1"
-                      href="https://instagram.com/carokowanzspanish/reels"
+                      href="https://instagram.com/carokowanzenglish/reels"
                       rel="noreferrer"
                       target="_blank">
                       <InstagramIcon />
@@ -114,7 +114,7 @@ export default function Navbar() {
               <div className="px-1 flex w-full">
                 <a
                   className="px-2 w-full flex items-center text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  href="https://instagram.com/carokowanzspanish/reels"
+                  href="https://instagram.com/carokowanzenglish/reels"
                   rel="noreferrer"
                   target="_blank">
                   <InstagramIcon className="text-black inline mr-2" />

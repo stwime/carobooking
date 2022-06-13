@@ -50,10 +50,10 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
             Book a Lesson
           </a>
           <a
-            href="#courses"
+            href="https://carolina-kowanz.teachable.com/p/business-english"
             className="hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             <span className="absolute -top-3 -left-1 px-2 py-1 mr-3 text-sm font-bold leading-none text-gray-100 bg-green-500 rounded-lg">NEW</span>
-            Spanish courses on Udemy
+            Business English Course
             
           </a>
           </div>
@@ -213,7 +213,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
           <p className="mt-8 md:mt-10 text-xl">Start learning right now on </p>
           <a
             className="my-4"
-            href="https://instagram.com/carokowanzspanish/reels"
+            href="https://instagram.com/carokowanzenglish/reels"
             rel="noreferrer"
             target="_blank">
             <div className="text-2xl font-semibold flex-inline hover:bg-gray-100 hover:text-black hover:bg-opacity-40 transition duration-100 rounded-xl p-2 px-4">
