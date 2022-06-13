@@ -26,8 +26,13 @@ export default function blog({posts}) {
           </div>
             <div className="container max-w-8xl mx-auto mx-12">
             <h1 className="w-full mt-12 mb-24 text-5xl font-bold leading-tight text-center text-gray-800">
-                    My courses on Udemy
+                    My courses
           </h1>
+          <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+            <div />
+          <CourseCard title="General Business English" url="https://carolina-kowanz.teachable.com/p/business-english" image="/courses/business.png" tags={["Intermediate", "English",]} description={"If you are learning English for your job or career, then the Business English Course is for you! It will help you communicate better in everyday professional situations."} />
+            <div />
+          </div>
           <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
             <CourseCard title="The Basics of Spanish" url="https://www.udemy.com/course/learn-spanish-for-beginners-m/?referralCode=22C090CE297EADAE5E99" image="/courses/basics.png" tags={["FREE!", "Beginner", "In English", "5 Lessons"]} description={"This course is designed for absolute beginners. It offers a clear and comprehensive grammatical foundation for acquiring a basic knowledge of the Spanish language. "} />
             <CourseCard title="Spanish for Travel" url="https://www.udemy.com/course/spanish-for-travel/?referralCode=5C0368E610E515ADBD5B" image="/courses/travel.png"  tags={["Beginner/Intermediate", "In English","8 Lessons"]} description={"If you are going on vacation in Spain, Latin America or any Spanish-speaking country then you should know at least some Spanish for your trip. My course is designed to assist you with communicating with the locals."}/>
