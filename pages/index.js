@@ -75,7 +75,8 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     <div className="relative md:-mt-1 xl:-mt-12 mt-0 gradient">
       <Waves />
     </div>
-    <section className="bg-gray-100 py-8">
+
+    {/* <section className="bg-gray-100 py-8">
       <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Get to know me
@@ -100,7 +101,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     <section className="bg-light-gray border-b py-8">
       <div className="container max-w-5xl mx-auto m-8 px-1">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
