@@ -83,7 +83,7 @@ export default function Navbar() {
                     </a>
                     <a
                       className="px-2 hover:bg-black rounded-md hover:bg-gray-900 p-1"
-                      href="https://open.spotify.com/show/49BzfxoYpOzrJlj60vwnuu"
+                      href="https://open.spotify.com/show/0b6LZFbkobg9op1gFct5db"
                       rel="noreferrer"
                       target="_blank">
                       <HeadPhonesIcon className="h-6 w-6  " />
@@ -124,7 +124,7 @@ export default function Navbar() {
               <div className="px-1 flex w-full">
                 <a
                   className="px-2 w-full flex items-center text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  href="https://open.spotify.com/show/49BzfxoYpOzrJlj60vwnuu"
+                  href="https://open.spotify.com/show/0b6LZFbkobg9op1gFct5db"
                   rel="noreferrer"
                   target="_blank">
                   <HeadPhonesIcon className="text-black inline mr-2" />

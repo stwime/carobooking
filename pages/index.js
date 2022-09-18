@@ -225,7 +225,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
           <p className="text-xl">and listen to my podcast on</p>
           <a
             className="my-4"
-            href="https://open.spotify.com/show/49BzfxoYpOzrJlj60vwnuu"
+            href="https://open.spotify.com/show/0b6LZFbkobg9op1gFct5db"
             rel="noreferrer"
             target="_blank">
             <div className="text-2xl font-semibold hover:bg-gray-100 hover:bg-opacity-40 transition duration-100 rounded-xl hover:text-black p-2 px-4">
