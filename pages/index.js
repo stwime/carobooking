@@ -28,34 +28,37 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
       <div className="container p-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div className="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
           <h1 className="my-4 text-5xl font-bold leading-tight">
-            Start learning <Typewriter
-            options={{
-              strings: ['English', 'Spanish'],
-              autoStart: true,
-              loop: true,
-              skipAddStyles: true
-            }}
-          /> today!
+            Start learning{' '}
+            <Typewriter
+              options={{
+                strings: ['English', 'Spanish'],
+                autoStart: true,
+                loop: true,
+                skipAddStyles: true,
+              }}
+            />{' '}
+            today!
           </h1>
-          <div
-            className="leading-normal text-2xl mb-8">
-            Learn Spanish or English online with a professional, certified teacher.
+          <div className="leading-normal text-2xl mb-8">
+            Learn Spanish or English online with a professional, certified
+            teacher.
             <br />
-
-            Start learning, improve and perfect your language skills in no time!</div>
-            <div className="flex flex-row gap-5">
-          <a
-            href="/book"
-            className=" hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            Book a Lesson
-          </a>
-          <a
-            href="https://carolina-kowanz.teachable.com/p/business-english"
-            className="hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            <span className="absolute -top-3 -left-1 px-2 py-1 mr-3 text-sm font-bold leading-none text-gray-100 bg-green-500 rounded-lg">NEW</span>
-            Business English Course
-            
-          </a>
+            Start learning, improve and perfect your language skills in no time!
+          </div>
+          <div className="flex flex-row gap-5">
+            <a
+              href="/book"
+              className=" hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Book a Lesson
+            </a>
+            <a
+              href="https://carolina-kowanz.teachable.com/p/business-english"
+              className="hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <span className="absolute -top-3 -left-1 px-2 py-1 mr-3 text-sm font-bold leading-none text-gray-100 bg-green-500 rounded-lg">
+                NEW
+              </span>
+              Business English Course
+            </a>
           </div>
         </div>
         <div className="w-full md:w-2/5 py-6 text-center">
@@ -131,14 +134,51 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     </section>
     <section id="courses" className="bg-light-gray border-b py-8">
       <div className="container max-w-7xl mx-auto m-8 px-1">
-      <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Courses
         </h2>
-      <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-            <CourseCard title="The Basics of Spanish" url="https://www.udemy.com/course/learn-spanish-for-beginners-m/?referralCode=22C090CE297EADAE5E99" image="/courses/basics.png" tags={["FREE!","Beginner", "In English", "5 Lessons"]} description={"This course is designed for absolute beginners. It offers a clear and comprehensive grammatical foundation for acquiring a basic knowledge of the Spanish language. "} />
-            <CourseCard title="Spanish for Travel" url="https://www.udemy.com/course/spanish-for-travel/?referralCode=5C0368E610E515ADBD5B" image="/courses/travel.png"  tags={["Beginner/Intermediate", "In English","8 Lessons"]} description={"If you are going on vacation in Spain, Latin America or any Spanish-speaking country then you should know at least some Spanish for your trip. My course is designed to assist you with communicating with the locals."}/>
-            <CourseCard title="Por & Para" url="https://www.udemy.com/course/por-para-guide/?referralCode=29EC0FD8AB55DF67526A" image="/courses/porpara.png"  tags={["All Levels", "In English", "6 Lessons"]} description={"In this course you will learn the uses of both por and para, many examples, how to use them in different setences and some expressions that we always use with POR and PARA."} />
-          </div>
+        <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+          <div />
+          <CourseCard
+            title="General Business English"
+            url="https://carolina-kowanz.teachable.com/p/business-english"
+            image="/courses/business.png"
+            tags={['Intermediate', 'English']}
+            description={
+              'If you are learning English for your job or career, then the Business English Course is for you! It will help you communicate better in everyday professional situations.'
+            }
+          />
+          <div />
+        </div>
+        <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+          <CourseCard
+            title="The Basics of Spanish"
+            url="https://www.udemy.com/course/learn-spanish-for-beginners-m/?referralCode=22C090CE297EADAE5E99"
+            image="/courses/basics.png"
+            tags={['FREE!', 'Beginner', 'In English', '5 Lessons']}
+            description={
+              'This course is designed for absolute beginners. It offers a clear and comprehensive grammatical foundation for acquiring a basic knowledge of the Spanish language. '
+            }
+          />
+          <CourseCard
+            title="Spanish for Travel"
+            url="https://www.udemy.com/course/spanish-for-travel/?referralCode=5C0368E610E515ADBD5B"
+            image="/courses/travel.png"
+            tags={['Beginner/Intermediate', 'In English', '8 Lessons']}
+            description={
+              'If you are going on vacation in Spain, Latin America or any Spanish-speaking country then you should know at least some Spanish for your trip. My course is designed to assist you with communicating with the locals.'
+            }
+          />
+          <CourseCard
+            title="Por & Para"
+            url="https://www.udemy.com/course/por-para-guide/?referralCode=29EC0FD8AB55DF67526A"
+            image="/courses/porpara.png"
+            tags={['All Levels', 'In English', '6 Lessons']}
+            description={
+              'In this course you will learn the uses of both por and para, many examples, how to use them in different setences and some expressions that we always use with POR and PARA.'
+            }
+          />
+        </div>
       </div>
     </section>
     <section className="bg-white border-b py-8">
@@ -252,7 +292,7 @@ export async function getStaticProps() {
   return {
     props: {
       frontpageSettings,
-      sellingPoints: sellingPoints.sort((a,b) => a.order - b.order),
+      sellingPoints: sellingPoints.sort((a, b) => a.order - b.order),
     },
   };
 }
