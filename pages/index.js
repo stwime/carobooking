@@ -60,7 +60,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
               Prepositions Course
             </a>
             <a
-              href="https://carolina-kowanz.teachable.com/p/english-prepositions"
+              href="https://carolina-kowanz.teachable.com/p/prepositions-guide-for-visual-learners"
               className="hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
               <span className="absolute -top-3 -left-1 px-2 py-1 mr-3 text-sm font-bold leading-none text-gray-100 bg-green-500 rounded-lg">
                 NEW
