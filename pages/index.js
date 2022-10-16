@@ -45,7 +45,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
             <br />
             Start learning, improve and perfect your language skills in no time!
           </div>
-          <div className="flex flex-row gap-5">
+          <div className="flex w-full items-center flex-col sm:flex-row gap-5">
             <a
               href="/book"
               className=" hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
