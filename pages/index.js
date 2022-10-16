@@ -52,12 +52,12 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
               Book a Lesson
             </a>
             <a
-              href="https://carolina-kowanz.teachable.com/p/business-english"
+              href="https://carolina-kowanz.teachable.com/p/english-prepositions"
               className="hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
               <span className="absolute -top-3 -left-1 px-2 py-1 mr-3 text-sm font-bold leading-none text-gray-100 bg-green-500 rounded-lg">
                 NEW
               </span>
-              Business English Course
+              Prepositions Course
             </a>
           </div>
         </div>
@@ -105,7 +105,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
         </div>
       </div>
     </section> */}
-    <section className="bg-light-gray border-b py-8">
+    {/*<section className="bg-light-gray border-b py-8">
       <div className="container max-w-5xl mx-auto m-8 px-1">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           {frontpageSettings.contentHeading}
@@ -131,51 +131,31 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
           />
         ))}
       </div>
-    </section>
+          </section> */}
     <section id="courses" className="bg-light-gray border-b py-8">
       <div className="container max-w-7xl mx-auto m-8 px-1">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Courses
         </h2>
-        <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-          <div />
+        <div className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10">
+        <CourseCard
+            title="Prepositions"
+            url="https://carolina-kowanz.teachable.com/p/english-prepositions"
+            image="/courses/prepositions_course.png"
+            tags={['All Levels', 'English', 'With Subtitles']}
+            large={true}
+            description={
+              'A 100% visual course (and a 62-page book) for visual learners. You will learn how to use: ON, IN, AT, BY, WITH, TO. With plenty of examples, images, quizzes, and explanations so you can learn how to use them correctly!'
+            }
+          />
           <CourseCard
             title="General Business English"
             url="https://carolina-kowanz.teachable.com/p/business-english"
-            image="/courses/business.png"
+            image="/courses/business_english_course.png"
             tags={['Intermediate', 'English']}
+            large={true}
             description={
               'If you are learning English for your job or career, then the Business English Course is for you! It will help you communicate better in everyday professional situations.'
-            }
-          />
-          <div />
-        </div>
-        <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-          <CourseCard
-            title="The Basics of Spanish"
-            url="https://www.udemy.com/course/learn-spanish-for-beginners-m/?referralCode=22C090CE297EADAE5E99"
-            image="/courses/basics.png"
-            tags={['FREE!', 'Beginner', 'In English', '5 Lessons']}
-            description={
-              'This course is designed for absolute beginners. It offers a clear and comprehensive grammatical foundation for acquiring a basic knowledge of the Spanish language. '
-            }
-          />
-          <CourseCard
-            title="Spanish for Travel"
-            url="https://www.udemy.com/course/spanish-for-travel/?referralCode=5C0368E610E515ADBD5B"
-            image="/courses/travel.png"
-            tags={['Beginner/Intermediate', 'In English', '8 Lessons']}
-            description={
-              'If you are going on vacation in Spain, Latin America or any Spanish-speaking country then you should know at least some Spanish for your trip. My course is designed to assist you with communicating with the locals.'
-            }
-          />
-          <CourseCard
-            title="Por & Para"
-            url="https://www.udemy.com/course/por-para-guide/?referralCode=29EC0FD8AB55DF67526A"
-            image="/courses/porpara.png"
-            tags={['All Levels', 'In English', '6 Lessons']}
-            description={
-              'In this course you will learn the uses of both por and para, many examples, how to use them in different setences and some expressions that we always use with POR and PARA.'
             }
           />
         </div>

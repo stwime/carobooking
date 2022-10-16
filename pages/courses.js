@@ -31,18 +31,28 @@ export default function blog({ posts }) {
         <h1 className="w-full mt-12 mb-2 text-5xl font-bold leading-tight text-center text-gray-800">
           My courses
         </h1>
-        <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-          <div />
+        <div className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
+          <CourseCard
+            title="Prepositions"
+            url="https://carolina-kowanz.teachable.com/p/english-prepositions"
+            image="/courses/prepositions_course.png"
+            tags={['All Levels', 'English', 'With Subtitles']}
+            large={true}
+            description={
+              'A 100% visual course (and a 62-page book) for visual learners. You will learn how to use: ON, IN, AT, BY, WITH, TO. With plenty of examples, images, quizzes, and explanations so you can learn how to use them correctly!'
+            }
+          />
           <CourseCard
             title="General Business English"
             url="https://carolina-kowanz.teachable.com/p/business-english"
-            image="/courses/business.png"
+            image="/courses/business_english_course.png"
             tags={['Intermediate', 'English']}
+            large={true}
             description={
               'If you are learning English for your job or career, then the Business English Course is for you! It will help you communicate better in everyday professional situations.'
             }
           />
-          <div />
+
         </div>
         <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
           <CourseCard
