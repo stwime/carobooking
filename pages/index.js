@@ -47,11 +47,6 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
           </div>
           <div className="flex w-full items-center flex-col sm:flex-row gap-5">
             <a
-              href="/book"
-              className=" hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-              Book a Lesson
-            </a>
-            <a
               href="https://carolina-kowanz.teachable.com/p/english-prepositions"
               className="hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
               <span className="absolute -top-3 -left-1 px-2 py-1 mr-3 text-sm font-bold leading-none text-gray-100 bg-green-500 rounded-lg">
@@ -71,7 +66,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
         </div>
         <div className="w-full md:w-2/5 py-6 text-center">
           <div className="w-full md:w-4/5 z-50">
-            <div className="mx-auto sm:h-96 sm:w-96 md:m-12 w-48 h-48 self-center relative">
+            <div className="mx-auto sm:h-96 sm:w-96 md:m-12 w-48 h-4/5 self-center relative">
               <Image
                 priority={true}
                 layout="fill"
@@ -86,33 +81,6 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     <div className="relative md:-mt-1 xl:-mt-12 mt-0 gradient">
       <Waves />
     </div>
-
-    {/* <section className="bg-gray-100 py-8">
-      <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Get to know me
-        </h2>
-        <div className="w-full mb-4">
-          <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div className="flex content-center lg:w-full rounded-lg p-1 sm:p-6 z-10">
-          <div className="flex w-full lg:w-4/5 h-auto px-4 mx-auto overflow-hidden">
-            <ExternalContentWrapper
-              name="Youtube"
-              alternateLink="https://www.youtube.com/v/p8pkVL6I7Pk">
-              <iframe
-                width="100%"
-                height="645px"
-                src="https://www.youtube.com/embed/p8pkVL6I7Pk"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen></iframe>
-            </ExternalContentWrapper>
-          </div>
-        </div>
-      </div>
-    </section> */}
     {/*<section className="bg-light-gray border-b py-8">
       <div className="container max-w-5xl mx-auto m-8 px-1">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -169,6 +137,32 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
         </div>
       </div>
     </section>
+     <section className="bg-gray-100 py-8">
+      <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Podcast
+        </h2>
+        <div className="w-full mb-4">
+          <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div className="flex content-center lg:w-full rounded-lg p-1 sm:p-6 z-10">
+          <div className="flex w-full lg:w-4/5 h-64 px-4 mx-auto overflow-hidden">
+            <ExternalContentWrapper
+              name="Youtube"
+              alternateLink="https://open.spotify.com/embed/episode/1V6vNOGx2n2WVjfAwWgoXs">
+              <iframe
+                width="100%"
+                height="250px"
+                src="https://open.spotify.com/embed/episode/1V6vNOGx2n2WVjfAwWgoXs"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen></iframe>
+            </ExternalContentWrapper>
+          </div>
+        </div>
+      </div>
+    </section> 
     <section className="bg-white border-b py-8">
       <div className="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
