@@ -11,7 +11,6 @@ const navigation = [
   // { name: 'Practice', href: '/practice' },
   { name: 'Courses', href: '/courses' },
   { name: 'Imprint', href: '/legal' },
-  { name: 'Book now!', href: '/book', highlight: true },
 ];
 
 function classNames(...classes) {

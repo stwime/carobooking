@@ -174,7 +174,7 @@ export default function LegalPage() {
             <h2>Contact Us</h2>
             <p>
               If you have any questions about this Disclaimer, You can contact
-              Us at: carokowanzspanish@gmail.com
+              Us at: business@carokowanz.com
             </p>
           </div>
           <div className="p-12 w-full lg:w-1/2">
@@ -202,7 +202,7 @@ export default function LegalPage() {
               13599 Berlin
             </p>
             <h2>Kontakt</h2>
-            <p>E-Mail: carokowanzspanish@gmail.com</p>
+            <p>E-Mail: business@carokowanz.com</p>
             <p>Telefon: +49 43963509</p>
             <h2>Umsatzsteuer-ID</h2>
             <p>

@@ -31,7 +31,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
             Start learning{' '}
             <Typewriter
               options={{
-                strings: ['English', 'Spanish'],
+                strings: ['English'],
                 autoStart: true,
                 loop: true,
                 skipAddStyles: true,
@@ -137,6 +137,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
         </div>
       </div>
     </section>
+    {/* 
      <section className="bg-gray-100 py-8">
       <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -163,6 +164,7 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
         </div>
       </div>
     </section> 
+    */}
     <section className="bg-white border-b py-8">
       <div className="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -215,19 +217,20 @@ const Home = ({ frontpageSettings, sellingPoints }) => (
     </svg>
     <section className="container mx-auto text-center pt-12 pb-36">
       <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-        What are you waiting for?
+        Contact
       </h2>
       <div className="w-full mb-4">
         <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
       <h2 className="my-4 text-3xl leading-tight">
-        Book your first lesson and start learning today!
+        For collaborations, business inquiries or projects, contact me at
       </h2>
       <div className="mt-12">
         <a
           className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          href="/book">
-          Book now!
+          href="mailto:contact@carokowanz.com"
+        >
+          contact@carokowanz.com
         </a>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 mt-16 py-0 rounded-t"></div>
